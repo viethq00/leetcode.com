@@ -35,7 +35,7 @@ const isPalindrome = function (x) {
     console.log("last Digit: ", lastDigit);
     reverseNumber = reverseNumber * 10 + lastDigit;
     console.log("reverse Number: ", reverseNumber);
-    copyOfX = Math.round(copyOfX / 10);
+    copyOfX = Math.floor(copyOfX / 10);
     console.log("new X: ", copyOfX);
     console.log("-----------------------");
   }
@@ -44,4 +44,4 @@ const isPalindrome = function (x) {
   return reverseNumber == x;
 };
 
-console.log("Is Palindrome?: ", isPalindrome(1141));
+console.log("Is Palindrome?: ", isPalindrome(81));
