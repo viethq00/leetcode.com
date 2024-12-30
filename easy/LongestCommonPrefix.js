@@ -46,5 +46,4 @@ function longestCommonPrefix(strs) {
 
   return prefix;
 }
-
 console.log("LCP: ", longestCommonPrefix(["reflower", "flow", "flight"]));
