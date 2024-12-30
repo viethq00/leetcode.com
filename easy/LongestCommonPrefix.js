@@ -19,26 +19,18 @@
 // strs[i] consists of only lowercase English letters.
 
 function longestCommonPrefix(strs) {
-  if (strs.length <= 1) {
-    return strs[0] || "";
-  }
-
-  let prefix = "";
+  let prefix = strs[0];
 
   for (let i = 0; i < strs.length; i++) {
     let currentPrefix = "";
     for (let j = 0; j < strs[i].length; j++) {
-      if (i === 0 || strs[i][j] === prefix[j]) {
-        // Compare with prefix or set prefix on first iteration
+      if (strs[i][j] === prefix[j]) {
         currentPrefix += strs[i][j];
       } else {
         break;
       }
     }
 
-    if (!prefix) {
-      prefix = currentPrefix;
-    }
     if (currentPrefix == prefix.substring(0, currentPrefix.length)) {
       prefix = prefix.substring(0, currentPrefix.length);
     }
